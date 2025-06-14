@@ -28,7 +28,7 @@ export default function Navbar() {
                 <div className='ml-auto block md:hidden'>
                     <GiHamburgerMenu onClick={() => setToogle(true)} className=' text-[#cccccc] text-[40px] ' />
                 </div>
-                <div className={`${toggle == true ? "translate-x-[0]" : "translate-x-full"} md:hidden z-30 duration-500 absolute top-0 right-0  h-full bg border`}>
+                <div className={`${toggle == true ? "translate-x-[0]" : "translate-x-full"} md:hidden z-30 duration-500 absolute top-0 right-0  h-full bg-[#292929] `}>
                     <RxCross1 onClick={() => setToogle(false)} className='text-[40px] font-bold text ml-auto mr-[10px] mt-[10px]' />
                     <div className='flex flex-col items-center'>
                         <div className='text mobnavlink'>Home</div>
