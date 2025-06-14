@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Montserrat", sans-serif;
+    width: 100vw;
+    overflow-x: hidden;
+
+}
+.color{
+    @apply text-[#101010]
+}
+.bg{
+    @apply bg-[#101010]
+}
+.text{
+    @apply text-[#cccccc]
+}
+.navlinks{
+    @apply md:px-[20px]  xl:px-[40px] py-[25px] hover:bg-[white] hover:text-[black] hover:cursor-pointer duration-500
+}
+.mobnavlink{
+    @apply  w-[250px] text-center py-[20px] hover:bg-[white] hover:text-[black] hover:cursor-pointer duration-500
+}
+.overlay{
+    background: #00000061;
+}
