@@ -5,7 +5,7 @@ import { RxCross1 } from "react-icons/rx";
 
 
 export default function Navbar() {
-    const [toggle, setToogle] = useState(true)
+    const [toggle, setToogle] = useState(false)
     return (
         <nav className="  w-full bg-[#101010]  p-2 md:p-0 " >
             <div className='w-[95%] md:w-[80%] mx-auto  flex items-center'>
@@ -21,7 +21,7 @@ export default function Navbar() {
                     </div>
                 </div>
 
-                <div onClick={() => setToogle(false)} className={`overlay ${toggle == true ? "block" : "hidden"}   absolute top-0 left-0 text-right z-20 w-[100vw] h-[100vh]`}>
+                <div onClick={() => setToogle(false)} className={`overlay ${toggle == true ? "block" : "hidden"}   absolute top-0 left-0 text-right z-20 w-[100vw] h-[100vh] md:hidden `}>
                     1
                 </div>
 
