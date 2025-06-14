@@ -39,13 +39,12 @@ body {
     background-image: linear-gradient(rgba(0, 0, 0, 0.088), rgba(0, 0, 0, 0.802)), url("./assets/hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
     background-position: 0px 5%;
 }
 
 @media screen and (max-width:1000px) {
     .hero {
-        background-position: 30% 0%;
+        background-position: 40% 0%;
     }
 }
 
