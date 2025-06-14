@@ -1,28 +1,58 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     font-family: "Montserrat", sans-serif;
     width: 100vw;
-    overflow: hidden;
+    overflow-x: hidden;
+    color: #cccccc;
 }
-.color{
+
+.color {
     @apply text-[#101010]
 }
-.bg{
+
+.bg {
     @apply bg-[#101010]
 }
-.text{
+
+.text {
     @apply text-[#cccccc]
 }
-.navlinks{
-    @apply md:px-[20px]  xl:px-[40px] py-[25px] hover:bg-[white] hover:text-[black] hover:cursor-pointer duration-500
+
+.navlinks {
+    @apply md:px-[20px] xl:px-[40px] py-[25px] hover:bg-[white] hover:text-[black] hover:cursor-pointer duration-500
 }
-.mobnavlink{
-    @apply  w-[250px] text-center py-[20px] hover:bg-[white] hover:text-[black] hover:cursor-pointer duration-500
+
+.mobnavlink {
+    @apply w-[250px] text-center py-[20px] hover:bg-[white] hover:text-[black] hover:cursor-pointer duration-500
 }
-.overlay{
+
+.overlay {
     background: #00000061;
 }
+
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.088), rgba(0, 0, 0, 0.802)), url("./assets/hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 0px 5%;
+}
+
+@media screen and (max-width:1000px) {
+    .hero {
+        background-position: 30% 0%;
+    }
+}
+
+.btn {
+    @apply hover:bg-[#101010] px-[25px] md:px-[35px] py-[10px] text-[18px] md:text-[22px] rounded-[3px] 
+           border border-transparent hover:border-0
+          bg-transparent border-[#cccccc] text-[#cccccc] 
+           hover:cursor-pointer duration-75;
+}
+
