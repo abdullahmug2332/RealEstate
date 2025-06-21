@@ -28,7 +28,7 @@ export default function Whychooseus() {
           <div key={index} className="space-y-4">
             <div className="text-3xl font-bold ">{index + 1}</div>
             <h3 className="text-lg font-semibold">{step.title}</h3>
-            <p className="text-sm ">{step.description}</p>
+            <p className="text-sm relative bottom-2">{step.description}</p>
           </div>
         ))}
       </div>
