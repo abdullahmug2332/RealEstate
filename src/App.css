@@ -40,6 +40,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0px 5%;
+    background-attachment: fixed    ;
 }
 
 @media screen and (max-width:1000px) {
@@ -49,8 +50,14 @@ body {
 }
 
 .btn {
-    @apply hover:bg-[#101010] px-[25px] md:px-[35px] py-[10px] text-[18px] md:text-[22px] rounded-[3px] 
+    @apply hover:bg-[#101010] px-[25px] md:px-[35px] py-[10px] text-[15px] md:text-[18px] rounded-[3px] 
            border border-transparent hover:border-0
+          bg-transparent border-[#cccccc] text-[#cccccc] 
+           hover:cursor-pointer duration-75;
+}
+.btn2 {
+    @apply hover:bg-[#101010] px-[25px] md:px-[35px] py-[10px] text-[15px] md:text-[18px] rounded-[3px] 
+           border border-transparent 
           bg-transparent border-[#cccccc] text-[#cccccc] 
            hover:cursor-pointer duration-75;
 }
