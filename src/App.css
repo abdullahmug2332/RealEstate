@@ -22,6 +22,10 @@ body {
 .text {
     @apply text-[#cccccc]
 }
+p,.text-white{
+    @apply text-[#cccccc]
+
+}
 
 .navlinks {
     @apply md:px-[20px] xl:px-[40px] py-[25px] hover:bg-[white] hover:text-[black] hover:cursor-pointer duration-500
