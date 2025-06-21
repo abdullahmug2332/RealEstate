@@ -44,7 +44,7 @@ p,.text-white{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0px 5%;
-    background-attachment: fixed    ;
+    background-attachment: fixed ;
 }
 
 @media screen and (max-width:1000px) {
@@ -66,3 +66,10 @@ p,.text-white{
            hover:cursor-pointer duration-75;
 }
 
+.banner{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.043), rgba(0, 0, 0, 0.511)), url("./assets/hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0px 5%;
+    background-attachment: fixed ;
+}

@@ -2,6 +2,7 @@ import React from 'react'
 import Hero from '../components/Hero'
 import Home2 from '../components/Home2'
 import Whychooseus from '../components/Whychooseus'
+import Banner from '../components/Banner'
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <Hero/>
       <Home2/>
       <Whychooseus/>
+      <Banner />
     </section>
   )
 }
