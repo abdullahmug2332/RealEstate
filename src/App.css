@@ -40,7 +40,7 @@ p,.text-white{
 }
 
 .hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.088), rgba(0, 0, 0, 0.802)), url("./assets/hero.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.043), rgba(0, 0, 0, 0.511)), url("./assets/hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0px 5%;
