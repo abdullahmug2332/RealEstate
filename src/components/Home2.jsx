@@ -23,7 +23,7 @@ export default function Home2() {
                 </div>
 
                 {/* Right Side: Content */}
-                <div className="w-full lg:w-[60%] xl:w-[65%] lg:pl-[40px] pt-[40px] lg:pt-0 text-white">
+                <div className="w-full lg:w-[60%] xl:w-[65%] lg:pl-[40px] pt-[40px] px-[20px] lg:pt-0 text-white">
                     <p className="text-[25px] font-semibold mb-[20px]">
                         In the name of Allah, the Most Gracious, the Most Merciful.
                     </p>

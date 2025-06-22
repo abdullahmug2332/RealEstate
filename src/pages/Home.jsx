@@ -3,6 +3,8 @@ import Hero from '../components/Hero'
 import Home2 from '../components/Home2'
 import Whychooseus from '../components/Whychooseus'
 import Banner from '../components/Banner'
+import Card from '../components/Card'
+import HomeCards from '../components/HomeCards'
 
 export default function Home() {
   return (
@@ -11,6 +13,7 @@ export default function Home() {
       <Home2/>
       <Whychooseus/>
       <Banner />
+      <HomeCards/>
     </section>
   )
 }
