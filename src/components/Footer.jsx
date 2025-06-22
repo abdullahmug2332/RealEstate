@@ -20,9 +20,9 @@ export default function Footer() {
               <p className='mt-[20px]'>We’re here to support you — whether you’re finding your dream home, renting, or investing smartly. Our friendly team is ready to answer your questions and guide you to the best real estate options within your needs and budget. Have a specific property in mind or want to schedule a visit? Reach out anytime — we’re just a call or message away, committed to helping with honesty and care.</p>
             </div>
             <div className='w-full lg:w-[25%]  flex lg:justify-center mt-[20px] lg:mt-[80px]  '>
-              <div className='flex lg:flex-col gap-[20px] lg:gap-[3px] flex-wrap'>
+              <div className='flex lg:flex-col gap-x-[20px] lg:gap-[3px] flex-wrap'>
                 <p className='text-[20px] md:text-[25px]  mb-[10px] font-semibold'>Pages</p>
-                <a href="#" className='flex items-center gap-[5px]  hover:scale-110 duration-500'>
+                <a href="#" className='flex items-center gap-x-[5px]  hover:scale-110 duration-500'>
                   <MdKeyboardDoubleArrowRight className=' ' />
                   <p className=''>Home</p>
                 </a>
