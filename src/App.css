@@ -73,3 +73,9 @@ p,.text-white{
     background-position: 0px 5%;
     background-attachment: fixed ;
 }
+
+@media screen and (max-width:1000px) {
+    .banner {
+        background-position: 40% 0%;
+    }
+}
