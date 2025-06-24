@@ -60,10 +60,18 @@ export default function Footer() {
               Copyright © 2025 Abdullah Real Estate || All Rights Reserved.
             </p>
             <div className='flex gap-[20px] justify-center '>
-              <FaTiktok className='text-[30px] hover:text-white cursor-pointer' />
-              <FaFacebook className='text-[30px] hover:text-white cursor-pointer' />
-              <AiFillInstagram className='text-[34px] hover:text-white cursor-pointer' />
-              <MdEmail className='text-[34px] hover:text-white cursor-pointer' />
+               <a href="https://www.tiktok.com/@abdullah.real.estate?_t=ZS-8xTZy91NvIG&_r=1" target='_blank'>
+            <FaTiktok className='text-[31px] hover:text-white cursor-pointer' />
+          </a>
+          <a href="#">
+            <FaFacebook className='text-[30px] hover:text-white cursor-pointer' />
+          </a>
+          <a href="https://www.instagram.com/abdullah.real.estate1?igsh=MXFsNDJ6ODRlZWwwYg==" target='_blank'>
+            <AiFillInstagram className='text-[34px] hover:text-white cursor-pointer' />
+          </a>
+          <a href="mailto:abdullahrealestate91@gmail.com">
+            <MdEmail className="text-[34px] hover:text-white cursor-pointer " />
+          </a>
             </div>
           </div>
         </div>
