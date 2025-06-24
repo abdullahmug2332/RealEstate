@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react'
 import house from "../assets/house.jpeg";
-import Card from './Card';
-import { Link } from 'react-router-dom';
 
-export default function HomeCards() {
-    const [data, setData] = useState([
+export default function propertiesCards() {
+        const [data, setData] = useState([
         {
             image: house,
             price: "2000000",
@@ -36,28 +34,7 @@ export default function HomeCards() {
             description: "Located in one of the most desirable neighborhoods, this spacious home combines premium construction with elegant design. Let our experienced team help you explore all the possibilities this home offers."
         }
     ]);
-
     return (
-        <>
-            <p className='text-[30px] md:text-[40px] text-center mb-[30px] font-semibold'>Latest Properties</p>
-            <div className="w-[95%] md:w-[80%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 p-4">
-                {data.map((item, index) => (
-                    <Card
-                        key={index}
-                        image={item.image}
-                        price={item.price}
-                        location={item.location}
-                        measurement={item.measurement}
-                        unit={item.unit}
-                        bed={item.bed}
-                        bath={item.bath}
-                        description={item.description}
-                    />
-                ))}
-            </div>
-            <div className=' my-[30px] flex justify-center'>
-            <Link to={"/properties"} className='btn2 duration-500 hover:scale-110 '>View Properties</Link>
-            </div>
-        </>
-    );
+        
+    )
 }

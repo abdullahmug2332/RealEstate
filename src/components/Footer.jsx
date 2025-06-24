@@ -5,6 +5,7 @@ import { FaTiktok } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import { MdEmail } from "react-icons/md";
+import { Link } from 'react-router-dom';
 
 
 
@@ -22,22 +23,22 @@ export default function Footer() {
             <div className='w-full lg:w-[25%]  flex lg:justify-center mt-[20px] lg:mt-[80px]  '>
               <div className='flex lg:flex-col gap-x-[20px] lg:gap-[3px] flex-wrap'>
                 <p className='text-[20px] md:text-[25px]  mb-[10px] font-semibold'>Pages</p>
-                <a href="#" className='flex items-center gap-x-[5px]  hover:scale-110 duration-500'>
+                <Link to={"/"} className='flex items-center gap-x-[5px]  hover:scale-110 duration-500'>
                   <MdKeyboardDoubleArrowRight className=' ' />
                   <p className=''>Home</p>
-                </a>
-                <a href="#" className='flex items-center gap-[5px] hover:scale-110 duration-500'>
+                </Link>
+                <Link to={"/about"} className='flex items-center gap-[5px] hover:scale-110 duration-500'>
                   <MdKeyboardDoubleArrowRight />
                   <p>About</p>
-                </a>
-                <a href="#" className='flex items-center gap-[5px] hover:scale-110 duration-500'>
+                </Link>
+                <Link to={"/properties"} className='flex items-center gap-[5px] hover:scale-110 duration-500'>
                   <MdKeyboardDoubleArrowRight />
                   <p>Properties</p>
-                </a>
-                <a href="#" className='flex items-center gap-[5px] hover:scale-110 duration-500'>
+                </Link>
+                <Link to={"/contact"} className='flex items-center gap-[5px] hover:scale-110 duration-500'>
                   <MdKeyboardDoubleArrowRight />
                   <p>Contact Us</p>
-                </a>
+                </Link>
               </div>
             </div>
             <div className='w-full lg:w-[45%]'>

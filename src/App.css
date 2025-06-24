@@ -67,7 +67,6 @@ p,.text-white{
 }
 
 .banner{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.043), rgba(0, 0, 0, 0.511)), url("./assets/hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0px 5%;
@@ -78,4 +77,7 @@ p,.text-white{
     .banner {
         background-position: 40% 0%;
     }
+}
+.filterinput{
+    @apply w-1/2 p-1 focus:outline-0 rounded-[2px] bg-transparent border-2 text-[15px] border-[#cccccc]
 }

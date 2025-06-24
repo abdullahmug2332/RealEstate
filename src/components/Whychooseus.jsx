@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Whychooseus() {
     const [data,setdata]=useState([
@@ -33,7 +34,7 @@ export default function Whychooseus() {
         ))}
       </div>
       <div className='flex justify-center my-[60px]'>
-      <button className='btn2  '>Contact US</button>
+      <Link to={"/properties"} className='btn2 '>View Properties</Link>
       </div>
     </div>
     </div>
