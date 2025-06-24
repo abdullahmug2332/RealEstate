@@ -144,8 +144,8 @@ export default function Properties() {
             <Hero title={hero.title} content={hero.content} bg={hero.bg} />
             <div className='my-[80px]'>
                 <p className='text-[30px] md:text-[40px] text-center mb-[20px] font-semibold'>All Properties</p>
-                <div className='w-[95%] md:w-[80%] mx-auto gap-[10px] flex flex-col md:flex-row'>
-                    <div className={`w-full md:w-[25%] ${toggle ? "h-[410px] md:h-[410px]" : " h-[47px] md:h-[410px]"} duration-500 overflow-hidden bg-[#2c2c2c] sticky top-2 py-2 px-5 rounded-[10px]`}>
+                <div className='w-[95%] lg:w-[80%]  mx-auto gap-[10px] flex flex-col md:flex-row'>
+                    <div className={`w-full md:w-[30%] xl:w-[25%] ${toggle ? "h-[410px] md:h-[410px]" : " h-[47px] md:h-[410px]"} duration-500 overflow-hidden bg-[#2c2c2c] sticky top-2 py-2 px-5 rounded-[10px]`}>
                         <div className='flex justify-between'>
                             <p className='font-semibold text-[25px]'>Filter</p>
                             <BiAbacus className='text-[35px] ' onClick={() => setToggle(!toggle)} />
@@ -178,7 +178,7 @@ export default function Properties() {
                         </div>
                         <button className='bg-[transparent] border-[#cccccc] border-2 text-[#ccccc] w-full mt-[13px] py-[5px] rounded-[3px]'>Find</button>
                     </div>
-                    <div className='w-full md:w-[75%]'>
+                    <div className='w-full md:w-[70%] xl:w-[75%] '>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 ">
                             {data.map((item, index) => (
                                 <Card
