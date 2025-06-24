@@ -16,7 +16,7 @@ export default function Banner(props) {
     console.log(bg)
     return (
         <div className='banner my-[40px]' style={{
-      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.043), rgba(0, 0, 0, 0.511)), url(${bg})`
+      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.343), rgba(0, 0, 0, 0.711)), url(${bg})`
     }}>
             <div className='w-[95%] md:w-[80%] mx-auto p-5 '>
                 <div>
