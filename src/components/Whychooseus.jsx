@@ -24,7 +24,7 @@ export default function Whychooseus() {
     <div className='w-[95%] md:w-[80%] mx-auto mb-[40px]'>
       <div className=" text-white">
         <p className='text-[30px] md:text-[40px] text-center mb-[60px] font-semibold'>Why Choose Us</p>
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-10 px-[20px]">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-10 px-[40px]">
         {data.map((step, index) => (
           <div key={index} className="space-y-4">
             <div className="text-3xl font-bold ">{index + 1}</div>
