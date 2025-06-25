@@ -3,6 +3,7 @@ import { TbRulerMeasure2 } from "react-icons/tb";
 import { FaBed } from "react-icons/fa6";
 import { FaBath } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 
 
@@ -20,8 +21,9 @@ export default function Card(props) {
 }
 
   return (
-    <div className='hover:scale-[1.02] cursor-pointer duration-500'>
-      <div className="bg-[#2C2C2C] shadow-md rounded-md overflow-hidden min-h-[470px]">
+    <Link to={"/property"} className='hover:scale-[1.02] cursor-pointer duration-500'>
+      <div className="bg-[#2C2C2C] shadow-md rounded-md overflow-hidden min-h-[470px] relative">
+        <p className='bg-[#2C2C2C] absolute top-2 right-2 text-white font-semibold px-[10px] text-[15px] py-[5px] rounded-[5px]'>For {props.type.charAt(0).toUpperCase() + props.type.slice(1)}</p>
         <img
           src={props.image}
           alt="Property"
@@ -46,6 +48,6 @@ export default function Card(props) {
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   )
 }

@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
-import house from "../assets/house.jpeg";
+import img1 from "../assets/pro1.png";
+import img2 from "../assets/pro2.png";
+import img3 from "../assets/pro3.png";
+import video from "../assets/video.mp4";
 import Card from './Card';
 import { Link } from 'react-router-dom';
 
@@ -12,55 +15,91 @@ import 'swiper/css/pagination';
 export default function HomeCards() {
     const [data] = useState([
         {
-            image: house,
-            price: "2000000",
+            price: 2000000,
             location: "Bahria Town - Jinnah Block",
-            measurement: "4",
-            unit: "Marla",
-            bed: "3",
-            bath: "2",
-            description: "We will provide initial advice for free and the enquiry will be handled by one of our fully qualified Consultant or Director."
+            type: "sale",
+            measurement: 4,
+            unit: "marla",
+            rooms: 3,
+            bath: 2,
+            front: 24,
+            back: 25,
+            description: "We will provide initial advice for free and the enquiry will be handled by one of our fully qualified Consultant or Director.",
+            media: [
+                { type: "image", src: img1 },
+                { type: "image", src: img2 },
+                { type: "image", src: img3 },
+                { type: "video", src: video },
+            ],
         },
         {
-            image: house,
-            price: "3500000",
+            price: 2000000,
+            location: "Bahria Town - Jinnah Block",
+            type: "sale",
+            measurement: 4,
+            unit: "marla",
+            rooms: 3,
+            bath: 2,
+            front: 24,
+            back: 25,
+            description: "We will provide initial advice for free and the enquiry will be handled by one of our fully qualified Consultant or Director.",
+            media: [
+                { type: "image", src: img1 },
+                { type: "image", src: img2 },
+                { type: "image", src: img3 },
+                { type: "video", src: video },
+            ],
+        },
+        {
+            price: 2000000,
+            location: "Bahria Town - Jinnah Block",
+            type: "sale",
+            measurement: 4,
+            unit: "marla",
+            rooms: 3,
+            bath: 2,
+            front: 24,
+            back: 25,
+            description: "We will provide initial advice for free and the enquiry will be handled by one of our fully qualified Consultant or Director.",
+            media: [
+                { type: "image", src: img1 },
+                { type: "image", src: img2 },
+                { type: "image", src: img3 },
+                { type: "video", src: video },
+            ],
+        },
+        {
+            price: 3500000,
             location: "DHA Phase 6 - Sector A",
-            measurement: "5",
-            unit: "Marla",
-            bed: "4",
-            bath: "3",
-            description: "This modern and stylish home offers comfort, convenience, and excellent investment value."
+            type: "sale",
+            measurement: 5,
+            unit: "marla",
+            rooms: 4,
+            bath: 3,
+            front: 26,
+            back: 24,
+            description: "This modern and stylish home offers comfort, convenience, and excellent investment value.",
+            media: [
+                { type: "image", src: img2 },
+                { type: "image", src: img3 },
+            ],
         },
         {
-            image: house,
-            price: "4800000",
+            price: 4800000,
             location: "Lake City - Sector M7",
-            measurement: "10",
-            unit: "Marla",
-            bed: "5",
-            bath: "4",
-            description: "Located in one of the most desirable neighborhoods, this spacious home combines premium construction with elegant design."
+            type: "rent",
+            measurement: 10,
+            unit: "marla",
+            rooms: 5,
+            bath: 4,
+            front: 30,
+            back: 30,
+            description: "Located in one of the most desirable neighborhoods, this spacious home combines premium construction with elegant design.",
+            media: [
+                { type: "image", src: img3 },
+                { type: "image", src: img1 },
+            ],
         },
-        {
-            image: house,
-            price: "4800000",
-            location: "Lake City - Sector M7",
-            measurement: "10",
-            unit: "Marla",
-            bed: "5",
-            bath: "4",
-            description: "Located in one of the most desirable neighborhoods, this spacious home combines premium construction with elegant design."
-        },
-        {
-            image: house,
-            price: "4800000",
-            location: "Lake City - Sector M7",
-            measurement: "10",
-            unit: "Marla",
-            bed: "5",
-            bath: "4",
-            description: "Located in one of the most desirable neighborhoods, this spacious home combines premium construction with elegant design."
-        }
     ]);
 
     return (
@@ -83,14 +122,17 @@ export default function HomeCards() {
                     {data.map((item, index) => (
                         <SwiperSlide key={index}>
                             <Card
-                                image={item.image}
+                                image={item.media[0].src} // First image
                                 price={item.price}
                                 location={item.location}
                                 measurement={item.measurement}
                                 unit={item.unit}
-                                bed={item.bed}
+                                bed={item.rooms}
                                 bath={item.bath}
                                 description={item.description}
+                                type={item.type}
+                                front={item.front}
+                                back={item.back}
                             />
                         </SwiperSlide>
                     ))}

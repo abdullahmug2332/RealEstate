@@ -4,6 +4,10 @@ import Hero from '../components/Hero';
 import house from "../assets/house.jpeg";
 import { BiAbacus } from "react-icons/bi";
 import { motion } from "framer-motion";
+import img1 from "../assets/pro1.png";
+import img2 from "../assets/pro2.png";
+import img3 from "../assets/pro3.png";
+import video from "../assets/video.mp4";
 
 export default function Properties() {
     useEffect(() => {
@@ -18,124 +22,160 @@ export default function Properties() {
     };
     const [data, setData] = useState([
         {
-            image: house,
-            price: "200000000",
+            price: 900000000,
             location: "Bahria Town - Jinnah Block",
-            measurement: "4",
-            unit: "Marla",
-            bed: "3",
-            bath: "2",
-            description: "We will provide initial advice for free and the enquiry will be handled by one of our fully qualified Consultant or Director. We have built an enviable reputation for selling a varied portfolio of properties."
+            type: "rent",
+            measurement: 4,
+            unit: "marla",
+            rooms: 3,
+            bath: 2,
+            front: 25,
+            back: 45,
+            description: "We will provide initial advice for free and the enquiry will be handled by one of our fully qualified Consultant or Director. We have built an enviable reputation for selling a varied portfolio of properties.",
+            media: [{ type: "image", src: house }]
         },
         {
-            image: house,
-            price: "350000000",
+            price: 350000000,
             location: "DHA Phase 6 - Sector A",
-            measurement: "5",
-            unit: "Marla",
-            bed: "4",
-            bath: "3",
-            description: "This modern and stylish home offers comfort, convenience, and excellent investment value. Guided by our expert consultants, we ensure a smooth and professional process from visit to final deal."
+            type: "sale",
+            measurement: 5,
+            unit: "marla",
+            rooms: 4,
+            bath: 3,
+            front: 22,
+            back: 38,
+            description: "This modern and stylish home offers comfort, convenience, and excellent investment value. Guided by our expert consultants, we ensure a smooth and professional process from visit to final deal.",
+            media: [{ type: "image", src: house }]
         },
         {
-            image: house,
-            price: "4800000",
+            price: 4800000,
             location: "Lake City - Sector M7",
-            measurement: "10",
-            unit: "Marla",
-            bed: "5",
-            bath: "4",
-            description: "Located in one of the most desirable neighborhoods, this spacious home combines premium construction with elegant design. Let our experienced team help you explore all the possibilities this home offers."
+            type: "rent",
+            measurement: 10,
+            unit: "marla",
+            rooms: 5,
+            bath: 4,
+            front: 30,
+            back: 32,
+            description: "Located in one of the most desirable neighborhoods, this spacious home combines premium construction with elegant design. Let our experienced team help you explore all the possibilities this home offers.",
+            media: [{ type: "image", src: house }]
         },
         {
-            image: house,
-            price: "2600000",
+            price: 2600000,
             location: "Wapda Town - Block N2",
-            measurement: "6",
-            unit: "Marla",
-            bed: "3",
-            bath: "2",
-            description: "Affordable and beautifully constructed, this home is perfect for small families. Secure neighborhood and all amenities nearby."
+            type: "sale",
+            measurement: 6,
+            unit: "marla",
+            rooms: 3,
+            bath: 2,
+            front: 24,
+            back: 34,
+            description: "Affordable and beautifully constructed, this home is perfect for small families. Secure neighborhood and all amenities nearby.",
+            media: [{ type: "image", src: house }]
         },
         {
-            image: house,
-            price: "5300000",
+            price: 5300000,
             location: "Johar Town - Phase 2",
-            measurement: "7",
-            unit: "Marla",
-            bed: "4",
-            bath: "3",
-            description: "A premium residential property with modern fixtures and beautiful finishing, located in the heart of the city."
+            type: "sale",
+            measurement: 7,
+            unit: "marla",
+            rooms: 4,
+            bath: 3,
+            front: 26,
+            back: 36,
+            description: "A premium residential property with modern fixtures and beautiful finishing, located in the heart of the city.",
+            media: [{ type: "image", src: house }]
         },
         {
-            image: house,
-            price: "4200000",
+            price: 4200000,
             location: "Al Rehman Garden - Phase 4",
-            measurement: "5",
-            unit: "Marla",
-            bed: "3",
-            bath: "2",
-            description: "A peaceful, gated community perfect for families looking for both comfort and security."
+            type: "sale",
+            measurement: 5,
+            unit: "marla",
+            rooms: 3,
+            bath: 2,
+            front: 22,
+            back: 30,
+            description: "A peaceful, gated community perfect for families looking for both comfort and security.",
+            media: [{ type: "image", src: house }]
         },
         {
-            image: house,
-            price: "6200000",
+            price: 6200000,
             location: "Valencia Town - Block F1",
-            measurement: "10",
-            unit: "Marla",
-            bed: "5",
-            bath: "4",
-            description: "This corner plot home offers spacious rooms, open terrace, and an amazing environment. Ideal for big families."
+            type: "sale",
+            measurement: 10,
+            unit: "marla",
+            rooms: 5,
+            bath: 4,
+            front: 35,
+            back: 35,
+            description: "This corner plot home offers spacious rooms, open terrace, and an amazing environment. Ideal for big families.",
+            media: [{ type: "image", src: house }]
         },
         {
-            image: house,
-            price: "3100000",
+            price: 3100000,
             location: "Gulshan-e-Ravi - Block H",
-            measurement: "5",
-            unit: "Marla",
-            bed: "3",
-            bath: "2",
-            description: "Great investment opportunity. Centrally located with all basic utilities and transport access."
+            type: "sale",
+            measurement: 5,
+            unit: "marla",
+            rooms: 3,
+            bath: 2,
+            front: 23,
+            back: 27,
+            description: "Great investment opportunity. Centrally located with all basic utilities and transport access.",
+            media: [{ type: "image", src: house }]
         },
         {
-            image: house,
-            price: "8900000",
+            price: 8900000,
             location: "DHA Phase 8 - Ex Air Avenue",
-            measurement: "12",
-            unit: "Marla",
-            bed: "6",
-            bath: "5",
-            description: "Luxury house with imported fittings, wide car porch, and servant quarter. Ideal for high-end living."
+            type: "sale",
+            measurement: 12,
+            unit: "marla",
+            rooms: 6,
+            bath: 5,
+            front: 40,
+            back: 45,
+            description: "Luxury house with imported fittings, wide car porch, and servant quarter. Ideal for high-end living.",
+            media: [{ type: "image", src: house }]
         },
         {
-            image: house,
-            price: "3800000",
+            price: 3800000,
             location: "Pak Arab Housing Scheme",
-            measurement: "6",
-            unit: "Marla",
-            bed: "3",
-            bath: "2",
-            description: "Budget-friendly and ready to move in house with all necessary facilities in a well-populated area."
+            type: "sale",
+            measurement: 6,
+            unit: "marla",
+            rooms: 3,
+            bath: 2,
+            front: 28,
+            back: 30,
+            description: "Budget-friendly and ready to move in house with all necessary facilities in a well-populated area.",
+            media: [{ type: "image", src: house }]
         },
         {
-            image: house,
-            price: "7500000",
+            price: 7500000,
             location: "Askari 11 - Sector B",
-            measurement: "10",
-            unit: "Marla",
-            bed: "5",
-            bath: "4",
-            description: "Well-maintained house in a secured Army-managed society, with parks, schools and shopping nearby."
+            type: "sale",
+            measurement: 10,
+            unit: "marla",
+            rooms: 5,
+            bath: 4,
+            front: 30,
+            back: 32,
+            description: "Well-maintained house in a secured Army-managed society, with parks, schools and shopping nearby.",
+            media: [{ type: "image", src: house }]
         },
         {
-            image: house,
-            price: "2900000",
+            price: 2900000,
             location: "Model Town Extension - Block L",
-            measurement: "5",
-            unit: "Marla",
-            bed: "3",
-            bath: "2",
-            description: "A budget-friendly property with easy access to markets, schools, and public transport. Ideal for small families."
+            type: "sale",
+            measurement: 5,
+            unit: "marla",
+            rooms: 3,
+            bath: 2,
+            front: 25,
+            back: 29,
+            description: "A budget-friendly property with easy access to markets, schools, and public transport. Ideal for small families.",
+            media: [{ type: "image", src: house }]
         }
     ]);
 
@@ -185,33 +225,37 @@ export default function Properties() {
                             <input type="number" className='filterinput ' placeholder='Bath' />
                         </div>
                         <button className='bg-[transparent] border-[#cccccc] border-2 text-[#ccccc] w-full mt-[13px] py-[5px] rounded-[3px]'>Find</button>
-                </motion.div>
-                <div className='w-full md:w-[70%] xl:w-[75%] '>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 ">
-                        {data.map((item, index) => (
-                            <motion.div
-                                key={index}
-                                initial={{ opacity: 0, y: 50 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.5, delay: index * 0.1 }}
-                            >
-                                <Card
-                                    image={item.image}
-                                    price={item.price}
-                                    location={item.location}
-                                    measurement={item.measurement}
-                                    unit={item.unit}
-                                    bed={item.bed}
-                                    bath={item.bath}
-                                    description={item.description}
-                                />
-                            </motion.div>
-                        ))}
+                    </motion.div>
+                    <div className='w-full md:w-[70%] xl:w-[75%] '>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 ">
+                            {data.map((item, index) => (
+                                <motion.div
+                                    key={index}
+                                    initial={{ opacity: 0, y: 50 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                                >
+                                    <Card
+                                        image={item.media[0].src} 
+                                        price={item.price}
+                                        location={item.location}
+                                        measurement={item.measurement}
+                                        unit={item.unit}
+                                        bed={item.rooms}
+                                        bath={item.bath}
+                                        description={item.description}
+                                        type={item.type}
+                                        front={item.front}
+                                        back={item.back}
+                                    />
+
+                                </motion.div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
         </section >
     );

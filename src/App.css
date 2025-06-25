@@ -84,6 +84,9 @@ p,.text-white{
 .swiper-wrapper{
     overflow: visible;
 }
-.swiper-button-next:after,.swiper-button-prev:after,.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+/* .swiper-button-next:after,.swiper-button-prev:after,.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
    display: none;
-}
+} */
+ .pp{
+    @apply  text-[20px] md:text-[22px] xl:text-[25px] font-medium
+ }
