@@ -12,7 +12,7 @@ export default function Contact() {
 
     const hero = {
         bg: "contact",
-        title: "Get in Touch with Abdullah Real Estate",
+        title: "Get in Touch with us",
         content:
             "Whether you're looking to buy, rent, or invest, Abdullah Real Estate is here to guide you every step of the way...",
     };
