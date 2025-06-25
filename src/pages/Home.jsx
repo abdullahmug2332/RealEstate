@@ -7,6 +7,7 @@ import Card from '../components/Card'
 import HomeCards from '../components/HomeCards'
 import img1 from '../assets/keys.jpg';
 import img2 from '../assets/rounded-border.png';
+import Stats from '../components/Stats'
 
 export default function Home() {
   useEffect(() => {
@@ -32,6 +33,7 @@ export default function Home() {
     <section className='w-[100vw] overflow-hidden'>
       <Hero title={hero.title} content={hero.content} bg={hero.bg} />
       <Home2 image1={home2.image1} image2={home2.image2} title={home2.title} content={home2.content} />
+      <Stats/>
       <Whychooseus />
       <Banner title={banner.title} content={banner.content} />
       <HomeCards />
