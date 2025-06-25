@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Hero from '../components/Hero';
 import { GrLocationPin } from "react-icons/gr";
 import { MdAddCall } from "react-icons/md";
+import { IoIosClock } from "react-icons/io";
 
 export default function Contact() {
     useEffect(() => {
@@ -92,7 +93,7 @@ export default function Contact() {
                                 {/* Working Hours */}
                                 <li className="flex items-center">
                                     <div className="flex items-center justify-center w-[50px] h-[50px]  bg-[#2C2C2C]  text-white rounded">
-                                        ⏰
+                                        <IoIosClock  className='text-[30px]'/>
                                     </div>
                                     <div className="ml-4">
                                         <h3 className="text-lg font-medium ">Business Hours</h3>
