@@ -43,7 +43,7 @@ export default function Footer() {
             </div>
             <div className='w-full lg:w-[45%]'>
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d300.377516016137!2d74.3414829783751!3d31.595945555283286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1750600254181!5m2!1sen!2s"
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3398.385723796415!2d74.33881397561454!3d31.595888874179607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzHCsDM1JzQ1LjIiTiA3NMKwMjAnMjkuMCJF!5e0!3m2!1sen!2s!4v1750855325123!5m2!1sen!2s"
                 className='w-[100%] h-[70%] mt-[20px] lg:mt-[70px]'
                 style={{ border: 0 }}
                 allowFullScreen=""
@@ -52,6 +52,7 @@ export default function Footer() {
               />
 
             </div>
+
           </div>
         </div>
         <div className="bg-[#414141] py-4 text-white">
@@ -60,18 +61,18 @@ export default function Footer() {
               Copyright © 2025 Abdullah Real Estate || All Rights Reserved.
             </p>
             <div className='flex gap-[20px] justify-center '>
-               <a href="https://www.tiktok.com/@abdullah.real.estate?_t=ZS-8xTZy91NvIG&_r=1" target='_blank'>
-            <FaTiktok className='text-[31px] hover:text-white cursor-pointer' />
-          </a>
-          <a href="#">
-            <FaFacebook className='text-[30px] hover:text-white cursor-pointer' />
-          </a>
-          <a href="https://www.instagram.com/abdullah.real.estate1?igsh=MXFsNDJ6ODRlZWwwYg==" target='_blank'>
-            <AiFillInstagram className='text-[34px] hover:text-white cursor-pointer' />
-          </a>
-          <a href="mailto:abdullahrealestate91@gmail.com">
-            <MdEmail className="text-[34px] hover:text-white cursor-pointer " />
-          </a>
+              <a href="https://www.tiktok.com/@abdullah.real.estate?_t=ZS-8xTZy91NvIG&_r=1" target='_blank'>
+                <FaTiktok className='text-[31px] hover:text-white cursor-pointer' />
+              </a>
+              <a href="#">
+                <FaFacebook className='text-[30px] hover:text-white cursor-pointer' />
+              </a>
+              <a href="https://www.instagram.com/abdullah.real.estate1?igsh=MXFsNDJ6ODRlZWwwYg==" target='_blank'>
+                <AiFillInstagram className='text-[34px] hover:text-white cursor-pointer' />
+              </a>
+              <a href="mailto:abdullahrealestate91@gmail.com">
+                <MdEmail className="text-[34px] hover:text-white cursor-pointer " />
+              </a>
             </div>
           </div>
         </div>
