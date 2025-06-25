@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Hero from '../components/Hero';
+import { GrLocationPin } from "react-icons/gr";
+import { MdAddCall } from "react-icons/md";
 
 export default function Contact() {
     useEffect(() => {
@@ -60,8 +62,8 @@ export default function Contact() {
                                 {/* Address */}
                                 <li >
                                     <a href="https://www.google.com/maps/place/31%C2%B035'45.2%22N+74%C2%B020'29.0%22E/@31.5957718,74.3412226,20z/data=!4m4!3m3!8m2!3d31.5958889!4d74.3413889?entry=ttu&g_ep=EgoyMDI1MDYyMy4wIKXMDSoASAFQAw%3D%3D" target='_blank' className='flex items-center'>
-                                        <div className="flex items-center justify-center w-10 h-10 bg-[#2C2C2C]  text-white rounded">
-                                            📍
+                                        <div className="flex items-center justify-center w-[50px] h-[50px] bg-[#2C2C2C]  text-white rounded">
+                                            <GrLocationPin  className='text-[30px]'/>
                                         </div>
                                         <div className="ml-4">
                                             <h3 className="text-lg font-medium ">Office Address</h3>
@@ -73,8 +75,8 @@ export default function Contact() {
 
                                 {/* Contact */}
                                 <li className="flex items-center ">
-                                    <div className="flex items-center justify-center w-10 h-10 bg-[#2C2C2C]  text-white rounded">
-                                        📞
+                                    <div className="flex items-center justify-center w-[50px] h-[50px] bg-[#2C2C2C]  text-white rounded">
+                                        <MdAddCall className='text-[30px]'/>
                                     </div>
                                     <div className="ml-4">
                                         <h3 className="text-lg font-medium">Contact Details</h3>
@@ -89,7 +91,7 @@ export default function Contact() {
 
                                 {/* Working Hours */}
                                 <li className="flex items-center">
-                                    <div className="flex items-center justify-center w-10 h-10 bg-[#2C2C2C]  text-white rounded">
+                                    <div className="flex items-center justify-center w-[50px] h-[50px]  bg-[#2C2C2C]  text-white rounded">
                                         ⏰
                                     </div>
                                     <div className="ml-4">
@@ -101,7 +103,7 @@ export default function Contact() {
                         </div>
 
                         {/* Contact Form */}
-                        <div className="p-6   rounded-[3px] focus:outline-0 shadow-md bg-[#2C2C2C] ">
+                        <div className="p-6   rounded-[3px] focus:outline-0 shadow-md bg-[#2C2C2C] relative top-[30px] ">
                             <h2 className="text-2xl font-bold mb-4 ">Send Us a Message</h2>
                             <form onSubmit={handleSubmit}>
                                 <div className="space-y-4">

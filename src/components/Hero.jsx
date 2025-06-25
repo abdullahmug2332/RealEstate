@@ -11,6 +11,7 @@ import { Link } from 'react-router-dom';
 
 
 
+
 export default function Hero(props) {
   const [bg, setbg] = useState(homehero);
 
@@ -29,7 +30,7 @@ export default function Hero(props) {
 
 
   return (
-    <section className='hero h-[100vh] min-h-[540px] ' style={{
+    <section className='hero h-[100vh] min-h-[540px]  ' style={{
       backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.043), rgba(0, 0, 0, 0.511)), url(${bg})`
     }}>
       <div className='w-[90%] md:w-[80%] mx-auto items-start flex flex-col justify-center h-full gap-[20px]'>

@@ -41,7 +41,7 @@ export default function Card(props) {
               <button className="btn !px-4 !py-1 !text-sm rounded">Call</button>
             </a>
             <a href="https://wa.me/923258257153" target='_blank'>
-              <button className="text-sm  text-white px-4 py-1 bg-[#0CC143]  rounded"><FaWhatsapp className='inline'/> WhatsApp</button>
+              <button className="text-sm  !text-white px-4 py-1 bg-[#0CC143]  rounded"><FaWhatsapp className='inline'/> WhatsApp</button>
             </a>
           </div>
         </div>
