@@ -14,7 +14,6 @@ export default function Contact() {
     };
     const [formData, setFormData] = useState({
         name: "",
-        phone: "",
         message: "",
     });
 
@@ -25,9 +24,9 @@ export default function Contact() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const { name, phone, message } = formData;
+        const { name,  message } = formData;
 
-        const whatsappMessage = `Hello Abdullah Real Estate,%0A%0AYou have a new inquiry!%0A%0AName: ${name}%0APhone: ${phone}%0AMessage: ${message}`;
+        const whatsappMessage = `Hello Abdullah Real Estate,%0A%0AYou have a new inquiry!%0A%0AName: ${name}%0AMessage: ${message}`;
 
         // Redirect to WhatsApp
         window.open(`https://wa.me/923258257153?text=${whatsappMessage}`, "_blank");
@@ -111,15 +110,6 @@ export default function Contact() {
                                         name="name"
                                         placeholder="Your name"
                                         value={formData.name}
-                                        onChange={handleChange}
-                                        className="w-full border border-gray-400 rounded-[3px] focus:outline-0 px-3 py-2 bg-transparent text-white"
-                                        required
-                                    />
-                                    <input
-                                        type="number"
-                                        name="phone"
-                                        placeholder="Your phone number"
-                                        value={formData.phone}
                                         onChange={handleChange}
                                         className="w-full border border-gray-400 rounded-[3px] focus:outline-0 px-3 py-2 bg-transparent text-white"
                                         required
