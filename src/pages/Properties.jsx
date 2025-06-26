@@ -31,8 +31,9 @@ export default function Properties() {
             bath: 2,
             front: 25,
             back: 45,
-            description: "We will provide initial advice for free and the enquiry will be handled by one of our fully qualified Consultant or Director. We have built an enviable reputation for selling a varied portfolio of properties.",
-            media: [{ type: "image", src: house }]
+            description: "We will provide initial advice for free...",
+            media: [{ type: "image", src: house }],
+            soldout: false
         },
         {
             price: 350000000,
@@ -44,8 +45,9 @@ export default function Properties() {
             bath: 3,
             front: 22,
             back: 38,
-            description: "This modern and stylish home offers comfort, convenience, and excellent investment value. Guided by our expert consultants, we ensure a smooth and professional process from visit to final deal.",
-            media: [{ type: "image", src: house }]
+            description: "This modern and stylish home offers comfort...",
+            media: [{ type: "image", src: house }],
+            soldout: true
         },
         {
             price: 4800000,
@@ -57,8 +59,9 @@ export default function Properties() {
             bath: 4,
             front: 30,
             back: 32,
-            description: "Located in one of the most desirable neighborhoods, this spacious home combines premium construction with elegant design. Let our experienced team help you explore all the possibilities this home offers.",
-            media: [{ type: "image", src: house }]
+            description: "Located in one of the most desirable neighborhoods...",
+            media: [{ type: "image", src: house }],
+            soldout: false
         },
         {
             price: 2600000,
@@ -70,8 +73,9 @@ export default function Properties() {
             bath: 2,
             front: 24,
             back: 34,
-            description: "Affordable and beautifully constructed, this home is perfect for small families. Secure neighborhood and all amenities nearby.",
-            media: [{ type: "image", src: house }]
+            description: "Affordable and beautifully constructed...",
+            media: [{ type: "image", src: house }],
+            soldout: true
         },
         {
             price: 5300000,
@@ -83,8 +87,9 @@ export default function Properties() {
             bath: 3,
             front: 26,
             back: 36,
-            description: "A premium residential property with modern fixtures and beautiful finishing, located in the heart of the city.",
-            media: [{ type: "image", src: house }]
+            description: "A premium residential property...",
+            media: [{ type: "image", src: house }],
+            soldout: false
         },
         {
             price: 4200000,
@@ -96,8 +101,9 @@ export default function Properties() {
             bath: 2,
             front: 22,
             back: 30,
-            description: "A peaceful, gated community perfect for families looking for both comfort and security.",
-            media: [{ type: "image", src: house }]
+            description: "A peaceful, gated community...",
+            media: [{ type: "image", src: house }],
+            soldout: true
         },
         {
             price: 6200000,
@@ -109,8 +115,9 @@ export default function Properties() {
             bath: 4,
             front: 35,
             back: 35,
-            description: "This corner plot home offers spacious rooms, open terrace, and an amazing environment. Ideal for big families.",
-            media: [{ type: "image", src: house }]
+            description: "This corner plot home offers spacious rooms...",
+            media: [{ type: "image", src: house }],
+            soldout: false
         },
         {
             price: 3100000,
@@ -122,8 +129,9 @@ export default function Properties() {
             bath: 2,
             front: 23,
             back: 27,
-            description: "Great investment opportunity. Centrally located with all basic utilities and transport access.",
-            media: [{ type: "image", src: house }]
+            description: "Great investment opportunity...",
+            media: [{ type: "image", src: house }],
+            soldout: false
         },
         {
             price: 8900000,
@@ -135,8 +143,9 @@ export default function Properties() {
             bath: 5,
             front: 40,
             back: 45,
-            description: "Luxury house with imported fittings, wide car porch, and servant quarter. Ideal for high-end living.",
-            media: [{ type: "image", src: house }]
+            description: "Luxury house with imported fittings...",
+            media: [{ type: "image", src: house }],
+            soldout: true
         },
         {
             price: 3800000,
@@ -148,8 +157,9 @@ export default function Properties() {
             bath: 2,
             front: 28,
             back: 30,
-            description: "Budget-friendly and ready to move in house with all necessary facilities in a well-populated area.",
-            media: [{ type: "image", src: house }]
+            description: "Budget-friendly and ready to move in...",
+            media: [{ type: "image", src: house }],
+            soldout: false
         },
         {
             price: 7500000,
@@ -161,8 +171,9 @@ export default function Properties() {
             bath: 4,
             front: 30,
             back: 32,
-            description: "Well-maintained house in a secured Army-managed society, with parks, schools and shopping nearby.",
-            media: [{ type: "image", src: house }]
+            description: "Well-maintained house in a secured Army-managed society...",
+            media: [{ type: "image", src: house }],
+            soldout: true
         },
         {
             price: 2900000,
@@ -174,8 +185,9 @@ export default function Properties() {
             bath: 2,
             front: 25,
             back: 29,
-            description: "A budget-friendly property with easy access to markets, schools, and public transport. Ideal for small families.",
-            media: [{ type: "image", src: house }]
+            description: "A budget-friendly property...",
+            media: [{ type: "image", src: house }],
+            soldout: false
         }
     ]);
 
@@ -191,7 +203,7 @@ export default function Properties() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 1 }}
-                        className={`w-full md:w-[30%] xl:w-[25%] ${toggle ? "h-[410px] md:h-[410px]" : " h-[47px] md:h-[410px]"} duration-500 overflow-hidden bg-[#2c2c2c] sticky top-2 py-2 px-5 rounded-[10px]`}
+                        className={`w-full md:w-[30%] xl:w-[25%] ${toggle ? "h-[450px] md:h-[450px]" : " h-[47px] md:h-[450px]"} duration-500 overflow-hidden bg-[#2c2c2c] sticky top-2 py-2 px-5 rounded-[10px]`}
                     >
 
                         <div className='flex justify-between'>
@@ -220,14 +232,19 @@ export default function Properties() {
                             <option value="marla" className='text-black'>Marlas</option>
                             <option value="kanal" className='text-black'>Kanals</option>
                         </select>
+
                         <div className='flex  gap-[5px] mt-[5px]'>
                             <input type="number" className='filterinput ' placeholder='Bed' />
                             <input type="number" className='filterinput ' placeholder='Bath' />
                         </div>
+                        <select className='filterinput !w-full mt-[5px]'>
+                            <option value="marla" className='text-black'>Shadbagh</option>
+                            <option value="kanal" className='text-black'>China Scheme</option>
+                        </select>
                         <button className='bg-[transparent] border-[#cccccc] border-2 text-[#ccccc] w-full mt-[13px] py-[5px] rounded-[3px]'>Find</button>
                     </motion.div>
                     <div className='w-full md:w-[70%] xl:w-[75%] '>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 ">
+                        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3 ">
                             {data.map((item, index) => (
                                 <motion.div
                                     key={index}
@@ -237,7 +254,7 @@ export default function Properties() {
                                     transition={{ duration: 0.5, delay: index * 0.1 }}
                                 >
                                     <Card
-                                        image={item.media[0].src} 
+                                        image={item.media[0].src}
                                         price={item.price}
                                         location={item.location}
                                         measurement={item.measurement}
@@ -248,6 +265,7 @@ export default function Properties() {
                                         type={item.type}
                                         front={item.front}
                                         back={item.back}
+                                        soldout={item.soldout}
                                     />
 
                                 </motion.div>
