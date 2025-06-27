@@ -4,7 +4,7 @@ import { FaBed } from "react-icons/fa6";
 import { FaBath } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
 import { Link } from 'react-router-dom';
-
+import {baseURL } from "../../API/baseURL"
 
 
 export default function Card(props) {
@@ -16,16 +16,16 @@ export default function Card(props) {
     } else if (num >= 100000) {
       return (num / 100000).toFixed(2) + " Lac";
     } else {
-      return num.toLocaleString(); // fallback for smaller numbers
+      return num.toLocaleString(); 
     }
   }
-
+  console.log(props.id)
   return (
-    <Link to={"/property"} className='hover:scale-[1.02] cursor-pointer duration-500'>
+    <Link to={`/property/${props.id}`} className='hover:scale-[1.02] cursor-pointer duration-500'>
       <div className="bg-[#2C2C2C] shadow-md rounded-md overflow-hidden  relative min-h-[460px] hover:scale-[1.02] cursor-pointer duration-500">
         <p className='bg-[#2C2C2C] absolute top-2 right-2 text-white font-semibold px-[10px] text-[15px] py-[5px] rounded-[5px]'>For {props.type.charAt(0).toUpperCase() + props.type.slice(1)}</p>
         <img
-          src={props.image}
+          src={`${baseURL}/images/${props.image}`}
           alt="Property"
           className="w-full h-[250px] object-cover"
         />
@@ -45,12 +45,19 @@ export default function Card(props) {
               : props.description}
           </p>
           <div className="flex gap-2 mt-auto">
-            <a href="tel:+923258257153" target='_blank'>
-              <button className="btn !px-4 !py-1 !text-sm rounded">Call</button>
-            </a>
-            <a href="https://wa.me/923258257153" target='_blank'>
-              <button className="text-sm  !text-white px-4 py-1 bg-[#0CC143]  rounded"><FaWhatsapp className='inline' /> WhatsApp</button>
-            </a>
+            <button
+              className="btn !px-4 !py-1 !text-sm rounded"
+              onClick={() => window.open("tel:+923258257153", "_blank")}
+            >
+              Call
+            </button>
+
+            <button
+              className="text-sm !text-white px-4 py-1 bg-[#0CC143] rounded flex items-center gap-1"
+              onClick={() => window.open("https://wa.me/923258257153", "_blank")}
+            >
+              <FaWhatsapp /> WhatsApp
+            </button>
           </div>
         </div>
       </div>

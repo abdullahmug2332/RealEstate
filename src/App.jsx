@@ -20,7 +20,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/properties" element={<Properties />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/property" element={<Property />} />
+          <Route path="/property/:id" element={<Property />} />
         </Routes>
         <Footer/>
       </BrowserRouter>
