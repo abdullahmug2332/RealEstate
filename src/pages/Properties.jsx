@@ -30,7 +30,7 @@ export default function Properties() {
         axios.get("http://localhost:5000/properties")
             .then(res => {
                 const availableProperties = res.data.filter(
-                    (property) => property.status === "available"
+                    (property) => property.soldout == false
                 );
                 setData(availableProperties);
             })
