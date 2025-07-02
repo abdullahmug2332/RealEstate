@@ -26,7 +26,6 @@ export default function Hero(props) {
       style={{
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.043), rgba(0, 0, 0, 0.511)), url(${bg})`,
         backgroundSize: 'cover',
-        backgroundPosition: 'center',
       }}
     >
       <div className="w-[90%] md:w-[80%] mx-auto items-start flex flex-col justify-center h-full gap-[20px]">

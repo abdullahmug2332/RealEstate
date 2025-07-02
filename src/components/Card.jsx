@@ -38,7 +38,7 @@ export default function Card(props) {
           </p>
           <p className="text-xl font-semibold text-white mt-[12px]">PKR {formatPrice(props.price)}</p>
           <p className="text-sm  mt-1 text-white">{props.location}</p>
-          <p className="text-sm text-white">{props.measurement} {props.unit} <TbRulerMeasure2 className='inline' /> | {props.bed} <FaBed className='inline text-[13px]' /> | {props.bath} <FaBath className='inline text-[13px]' /></p>
+          <p className="text-sm text-white">{props.measurement} {props.unit} <TbRulerMeasure2 className='inline' /> | {props.rooms} <FaBed className='inline text-[13px]' /> | {props.bath} <FaBath className='inline text-[13px]' /></p>
           <p className="text-[13px] mt-2 ">
             {props.description.length > 180
               ? props.description.slice(0, 180) + "..."
