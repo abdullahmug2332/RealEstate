@@ -90,3 +90,7 @@ p,.text-white{
  .pp{
     @apply  text-[20px] md:text-[22px] xl:text-[25px] font-medium
  }
+ .swiper-pagination-bullets{
+    position: relative !important;
+    top: 6px !important;
+ }
