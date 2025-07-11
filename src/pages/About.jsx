@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import Hero from '../components/Hero';
 import Home2 from '../components/Home2';
 import Banner from '../components/Banner';
-
+import HomeCards from '../components/HomeCards'
 import img1 from '../assets/guide.jpg';
 import img2 from '../assets/handshake.jpg';
 import heroimg from "../assets/hero.jpg"
@@ -38,6 +38,7 @@ export default function About() {
       <Hero title={hero.title} content={hero.content} bg={hero.bg} />
       <Home2 image1={home2.image1} image2={home2.image2} title={home2.title} content={home2.content} />
       <Banner title={banner.title} content={banner.content} bg={banner.bg} />
+      <HomeCards/>
     </section>
   );
 }

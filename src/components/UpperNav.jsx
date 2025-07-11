@@ -5,7 +5,7 @@ import { IoMdCall } from "react-icons/io";
 
 export default function UpperNav() {
     return (
-        <div className="text-white fixed top-0 left-0 w-full z-[1] py-[5px] bg-[#303030]">
+        <div className="text-white fixed top-0 left-0 w-full z-[50] py-[5px] bg-[#303030]">
             <div className="w-[95%] md:w-[80%] flex justify-between items-center mx-auto px-[20px] ">
                 <div className="items-center flex gap-x-[10px]">
                     <a href="https://www.tiktok.com/@abdullah.real.estate?_t=ZS-8xTZy91NvIG&_r=1" target="_blank" rel="noopener noreferrer">
