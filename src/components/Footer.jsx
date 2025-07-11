@@ -17,7 +17,9 @@ export default function Footer() {
         <div className='w-[95%] md:w-[80%]  mx-auto py-[40px]'>
           <div className='flex flex-wrap'>
             <div className='w-f lg:w-[30%]'>
-              <img src={mainlogo} className='w-[130px] md:w-[220px] lg:w-[250px] hover:scale-105 hover:cursor-pointer duration-500' />
+              <Link to={'/'}>
+                <img src={mainlogo} className='w-[130px] md:w-[220px] lg:w-[250px] hover:scale-105 hover:cursor-pointer duration-500' />
+              </Link>
               <p className='mt-[20px]'>We’re here to support you — whether you’re finding your dream home, renting, or investing smartly. Our friendly team is ready to answer your questions and guide you to the best real estate options within your needs and budget. Have a specific property in mind or want to schedule a visit? Reach out anytime — we’re just a call or message away, committed to helping with honesty and care.</p>
             </div>
             <div className='w-full lg:w-[25%]  flex lg:justify-center mt-[20px] lg:mt-[80px]  '>
