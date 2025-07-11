@@ -9,7 +9,7 @@ export default function Navbar() {
     const [toggle, setToogle] = useState(false)
     return (
         <section className="overflow-y-hidden w-[100vw] ">
-            <nav className=" fixed top-0 left-0  w-full bg-[#101010]  p-2 md:p-0 z-[999] " >
+            <nav className=" fixed top-9 left-0  w-full bg-[#101010]  p-2 md:p-0 z-[999] " >
                 <div className='w-[95%] md:w-[80%] mx-auto  flex items-center'>
                     <div className='flex items-center overflow-hidden'>
                         <Link to={"/"}>
@@ -33,7 +33,7 @@ export default function Navbar() {
                         </div>
                     </div>
 
-                    <div onClick={() => setToogle(false)} className={`overlay ${toggle == true ? "block" : "hidden"}   absolute top-0 left-0 text-right z-20 w-[100vw] h-[100vh] md:hidden `}>
+                    <div onClick={() => setToogle(false)} className={`overlay ${toggle == true ? "block" : "hidden"}   fixed top-0 left-0 text-right z-23 w-[100vw] h-[100vh] md:hidden `}>
                         1
                     </div>
 

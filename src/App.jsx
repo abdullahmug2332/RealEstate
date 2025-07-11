@@ -8,12 +8,14 @@ import About from './pages/About';
 import Properties from './pages/Properties';
 import Contact from './pages/Contact';
 import Property from './components/Property';
+import UpperNav from './components/UpperNav';
 
 function App() {
 
   return (
     <>
       <BrowserRouter>
+        <UpperNav />
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -22,7 +24,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/property/:id" element={<Property />} />
         </Routes>
-        <Footer/>
+        <Footer />
       </BrowserRouter>
     </>
   )
