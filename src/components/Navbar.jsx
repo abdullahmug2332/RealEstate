@@ -12,7 +12,9 @@ export default function Navbar() {
             <nav className=" fixed top-0 left-0  w-full bg-[#101010]  p-2 md:p-0 z-[999] " >
                 <div className='w-[95%] md:w-[80%] mx-auto  flex items-center'>
                     <div className='flex items-center overflow-hidden'>
-                        <img src={mainlogo} className='w-[180px] md:w-[250px] lg:w-[290px] hover:scale-105 hover:cursor-pointer duration-500' />
+                        <Link to={"/"}>
+                            <img src={mainlogo} className='w-[180px] md:w-[250px] lg:w-[290px] hover:scale-105 hover:cursor-pointer duration-500' />
+                        </Link>
                     </div>
                     <div className='ml-auto  hidden md:block'>
                         <div className='flex items-center'>
