@@ -117,7 +117,7 @@ export default function Property() {
                 overlayClassName="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center"
                 className="outline-none w-full max-w-[90%] h-[90vh] relative"
             >
-                <button onClick={closeModal} className="absolute top-10 right-4 text-white text-3xl z-50 text-[30px]"><RxCross1 className="text-white text-3xl z-50 text-[30px]" /></button>
+                <button onClick={closeModal} className="absolute top-20 right-4 text-white text-3xl z-50 text-[30px]"><RxCross1 className="text-white text-3xl z-50 text-[30px]" /></button>
                 <Swiper
                     modules={[Navigation, Pagination]}
                     navigation
@@ -179,13 +179,13 @@ export default function Property() {
                 <div className="flex items-center justify-center gap-[5px] border-x-2 py-[20px]">
                     <TbRulerMeasure className="text-[30px]" />
                     <p className="pp">
-                        {property.front} Front
+                        {property.front} ft Front
                     </p>
                 </div>
                 <div className="flex items-center justify-center gap-[5px] py-[20px] border-x-2">
                     <TbRulerMeasure className="text-[30px]" />
                     <p className="pp">
-                        {property.back} Back
+                        {property.back} ft Back
                     </p>
                 </div>
             </div>

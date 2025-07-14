@@ -18,20 +18,24 @@ export default function HomeCards() {
      const [properties, setProperties] = useState([]);
 
     useEffect(() => {
-        const fetchProperties = async () => {
-            try {
-                const res = await axios.get("http://localhost:5000/properties"); // Adjust baseURL if needed
-                const sorted = res.data
-                    .sort((a, b) => new Date(b.created_at) - new Date(a.created_at)) // Sort by latest
-                    .slice(0, 5); // Take latest 5
-                setProperties(sorted);
-            } catch (error) {
-                console.error("Error fetching properties:", error);
-            }
-        };
+    const fetchProperties = async () => {
+        try {
+            const res = await axios.get("http://localhost:5000/properties");
+            const available = res.data.filter(
+                (property) => property.soldout == false && property.rentedOut == false
+            );
+            const sorted = available
+                .sort((a, b) => new Date(b.created_at) - new Date(a.created_at))
+                .slice(0, 5); // latest 5 available properties
+            setProperties(sorted);
+        } catch (error) {
+            console.error("Error fetching properties:", error);
+        }
+    };
 
-        fetchProperties();
-    }, []);
+    fetchProperties();
+}, []);
+
     return (
         <>
             <p className='text-[30px] md:text-[40px] text-center mb-[30px] font-semibold'>Latest Properties</p>
