@@ -4,6 +4,7 @@ import Hero from '../components/Hero';
 import { BiAbacus } from "react-icons/bi";
 import { motion } from "framer-motion";
 import axios from "axios";
+import { baseURL } from '../../API/baseURL';
 
 export default function Properties() {
     useEffect(() => {
@@ -35,7 +36,7 @@ export default function Properties() {
     };
 
     useEffect(() => {
-        axios.get("http://localhost:5000/properties")
+        axios.get(`${baseURL}/properties`)
             .then(res => {
                 const available = res.data.filter(
                     (property) => property.soldout == false && property.rentedOut == false

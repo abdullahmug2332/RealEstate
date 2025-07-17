@@ -12,6 +12,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import axios from 'axios';
+import { baseURL } from '../../API/baseURL';
 
 export default function HomeCards() {
 
@@ -20,7 +21,7 @@ export default function HomeCards() {
     useEffect(() => {
     const fetchProperties = async () => {
         try {
-            const res = await axios.get("http://localhost:5000/properties");
+            const res = await axios.get(`${baseURL}/properties`);
             const available = res.data.filter(
                 (property) => property.soldout == false && property.rentedOut == false
             );

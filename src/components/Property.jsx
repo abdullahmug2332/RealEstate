@@ -30,7 +30,7 @@ export default function Property() {
     useEffect(() => {
         const fetchProperty = async () => {
             try {
-                const res = await axios.get(`http://localhost:5000/properties/${id}`);
+                const res = await axios.get(`${baseURL}/properties/${id}`);
                 setProperty(res.data);
             } catch (error) {
                 console.error("Error fetching property:", error);
@@ -214,11 +214,6 @@ export default function Property() {
                         month: "long",
                         year: "numeric",
                     })}
-                </p>
-
-                <p >
-                    Looking for a well-designed home in a prime area like {property.location}? This {property.measurement}{" "}
-                    {property.unit} property is ideal for affordability, style, and comfort.
                 </p>
 
                 <ul className="space-y-2">
