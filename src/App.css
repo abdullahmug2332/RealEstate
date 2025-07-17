@@ -27,7 +27,7 @@ p,.text-white{
 }
 
 .navlinks {
-    @apply md:px-[20px] xl:px-[40px] py-[25px] hover:bg-[white] hover:text-[black] hover:cursor-pointer duration-500
+    @apply md:px-[20px] xl:px-[40px] py-[25px] hover:bg-[white] hover:text-[black] hover:cursor-pointer duration-500 font-[600]
 }
 
 .mobnavlink {
