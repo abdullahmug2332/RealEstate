@@ -30,6 +30,9 @@ export default function Property() {
     useEffect(() => {
         window.scrollTo({ top: 0, behavior: "smooth" });
     }, []);
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }, [property]);
 
     useEffect(() => {
         const fetchProperty = async () => {
