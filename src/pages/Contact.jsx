@@ -60,7 +60,7 @@ export default function Contact() {
                             <ul className="space-y-6">
                                 {/* Address */}
                                 <li>
-                                    <a href="https://www.google.com/maps/..." target='_blank' className='flex items-center'>
+                                    <a href="https://maps.app.goo.gl/NyUKYn7YEm64ULXb9" target='_blank' className='flex items-center'>
                                         <div className="flex items-center justify-center w-[50px] h-[50px] bg-[#2C2C2C] text-white rounded">
                                             <GrLocationPin className='text-[30px]' />
                                         </div>
