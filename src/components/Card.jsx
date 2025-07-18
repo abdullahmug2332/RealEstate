@@ -27,7 +27,7 @@ export default function Card(props) {
         <img
           src={`${baseURL}/images/${props.image}`}
           alt="Property"
-          className="w-full h-[250px] object-cover"
+          className="w-full h-[250px] object-cover object-center"
         />
         <div className="p-4 bg-[#2C2C2C]  flex flex-col relative h-[200px]">
           <p
@@ -40,8 +40,8 @@ export default function Card(props) {
           <p className="text-sm  mt-1 text-white">{props.location}</p>
           <p className="text-sm text-white">{props.measurement} {props.unit} <TbRulerMeasure2 className='inline' /> | {props.rooms} <FaBed className='inline text-[13px]' /> | {props.bath} <FaBath className='inline text-[13px]' /></p>
           <p className="text-[13px] mt-2 ">
-            {props.description.length > 180
-              ? props.description.slice(0, 180) + "..."
+            {props.description.length > 80
+              ? props.description.slice(0,80) + "..."
               : props.description}
           </p>
           <div className="flex gap-2 mt-auto">
