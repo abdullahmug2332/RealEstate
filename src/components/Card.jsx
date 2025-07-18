@@ -19,6 +19,7 @@ export default function Card(props) {
       return num.toLocaleString(); 
     }
   }
+  
   return (
     <Link to={`/property/${props.id}`} className='hover:scale-[1.02] cursor-pointer duration-500'>
       <div className="bg-[#2C2C2C] shadow-md rounded-md overflow-hidden  relative min-h-[460px] hover:scale-[1.02] cursor-pointer duration-500">

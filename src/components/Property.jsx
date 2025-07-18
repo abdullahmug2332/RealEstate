@@ -58,6 +58,22 @@ export default function Property() {
     const closeModal = () => {
         setModalIsOpen(false);
     };
+    function formatPrice(price) {
+        const num = parseInt(price, 10);
+        return num.toLocaleString("en-PK"); // or use "en-US"
+    }
+
+     function formatPriceinWord(price) {
+    const num = parseInt(price, 10);
+
+    if (num >= 10000000) {
+      return (num / 10000000).toFixed(2) + " Crore";
+    } else if (num >= 100000) {
+      return (num / 100000).toFixed(2) + " Lac";
+    } else {
+      return num.toLocaleString(); 
+    }
+  }
 
     if (loading) return <div className="text-center my-10">Loading...</div>;
     if (!property) return <div className="text-center my-10">Property not found</div>;
@@ -214,7 +230,7 @@ export default function Property() {
                 </h3>
 
                 <h3 className="text-2xl font-bold mb-2">
-                    PKR : {property?.price}
+                    PKR : {formatPrice(property?.price)} ({formatPriceinWord(property?.price)})
                 </h3>
                 <p className="inline mr-[10px] font-semibold" > Posted At :</p>
                 <p className="inline" >
