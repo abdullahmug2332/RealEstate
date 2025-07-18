@@ -58,15 +58,15 @@ export default function Property() {
     if (!property) return <div className="text-center my-10">Property not found</div>;
 
     return (
-        <section className="mt-[30p]">
+        <section >
             {/* Mobile Swiper */}
-            <div className="w-[95%] md:w-[80%] mx-auto block md:hidden">
+            <div className="w-[95%] md:w-[80%] mx-auto mt-[40px] block md:hidden">
                 <Swiper modules={[Navigation, Pagination]} navigation pagination={{ clickable: true }}>
                     {property.media.map((item, index) => (
-                        <SwiperSlide key={index}>
+                        <SwiperSlide key={index} className="!flex !items-center !justify-center">
                             <div
                                 onClick={() => openModal(index)}
-                                className="w-full h-[500px]  rounded-lg overflow-hidden cursor-pointer flex items-center justify-center"
+                                className="w-full h-[500px] rounded-lg overflow-hidden cursor-pointer !flex !items-center !justify-center"
                             >
                                 {item.type === "image" ? (
                                     <img src={`${baseURL}/images/${item.src}`} alt={`media-${index}`} className="h-full object-contain" />
@@ -119,9 +119,9 @@ export default function Property() {
                 isOpen={modalIsOpen}
                 onRequestClose={closeModal}
                 overlayClassName="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center"
-                className="outline-none w-full max-w-[90%] h-[90vh] relative mt-[160px]"
+                className="outline-none w-full max-w-[90%] h-[90vh] relative mt-[100px]"
             >
-                <button onClick={closeModal} className="absolute top-20 right-4 text-white text-3xl z-50 text-[30px]"><RxCross1 className="text-white text-3xl z-50 text-[30px]" /></button>
+                <button onClick={closeModal} className="absolute top-2 right-4 text-white text-3xl z-50 text-[30px]"><RxCross1 className="text-white text-3xl z-50 text-[30px]" /></button>
                 <Swiper
                     modules={[Navigation, Pagination]}
                     navigation

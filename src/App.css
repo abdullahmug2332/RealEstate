@@ -122,3 +122,6 @@ p,.text-white{
 .swiper-pagination-bullet-active{
     background-color: white !important;
 }
+.swiper-slide{
+    display: flex;
+}
