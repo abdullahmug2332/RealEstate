@@ -10,9 +10,6 @@ import img2 from '../assets/rounded-border.png';
 import Stats from '../components/Stats'
 
 export default function Home() {
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, []);
   const hero = {
     bg: "home",
     title: "Find the best properties  deals ever.",

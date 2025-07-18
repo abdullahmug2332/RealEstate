@@ -17,6 +17,10 @@ import { RxCross1 } from "react-icons/rx";
 Modal.setAppElement("#root");
 
 export default function Property() {
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, []);
+
     const { id } = useParams();
     const [property, setProperty] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -78,7 +82,7 @@ export default function Property() {
             </div>
 
             {/* Desktop Swiper */}
-            <div className="w-[95%] md:w-[90%] xl:w-[80%] mx-auto hidden md:flex">
+            <div className="w-[95%] md:w-[90%] xl:w-[80%] h-[70vh] mx-auto mt-[50px] hidden md:flex">
                 <Swiper
                     modules={[Navigation, Pagination]}
                     navigation
@@ -89,13 +93,13 @@ export default function Property() {
                         1024: { slidesPerView: 3 },
                         1280: { slidesPerView: 4 },
                     }}
-                    className="w-full"
+                    className="w-full "
                 >
                     {property.media.map((item, index) => (
                         <SwiperSlide key={index}>
                             <div
                                 onClick={() => openModal(index)}
-                                className="flex justify-center items-center h-full  rounded-lg overflow-hidden shadow cursor-pointer"
+                                className="flex justify-center items-center h-[85%]  rounded-lg overflow-hidden shadow cursor-pointer"
                             >
                                 {item.type === "image" ? (
                                     <img src={`${baseURL}/images/${item.src}`} alt={`media-${index}`} className="h-full w-full object-contain" />
@@ -143,7 +147,7 @@ export default function Property() {
                 </Swiper>
             </Modal>
 
-            {/* details  */}
+            {/* details in row with icons */}
             <div className="w-[95%] md:w-[80%] mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-y-[10px]  my-[20px]" >
                 <div className="flex items-center justify-center gap-[5px] border-x-2  py-[20px]">
                     <MdHome className="text-[30px]" />
@@ -207,7 +211,7 @@ export default function Property() {
                 <h3 className="text-2xl font-bold mb-2">
                     PKR : {property?.price}
                 </h3>
-                <p className="inline mr-[10px]" > Created At :</p>
+                <p className="inline mr-[10px] font-semibold" > Posted At :</p>
                 <p className="inline" >
                     {new Date(property.createdAt).toLocaleDateString("en-GB", {
                         day: "2-digit",

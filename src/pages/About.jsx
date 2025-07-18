@@ -8,9 +8,6 @@ import img2 from '../assets/handshake.jpg';
 import heroimg from "../assets/hero.jpg"
 
 export default function About() {
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, []);
   const hero = {
     bg: "about",
     title: "Learn More About Us",

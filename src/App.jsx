@@ -9,12 +9,13 @@ import Properties from './pages/Properties';
 import Contact from './pages/Contact';
 import Property from './components/Property';
 import UpperNav from './components/UpperNav';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
-
   return (
     <>
       <BrowserRouter>
+      <ScrollToTop /> 
         <UpperNav />
         <Navbar />
         <Routes>

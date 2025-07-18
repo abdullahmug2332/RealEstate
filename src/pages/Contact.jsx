@@ -6,9 +6,6 @@ import { IoIosClock } from "react-icons/io";
 import { motion } from 'framer-motion';
 
 export default function Contact() {
-    useEffect(() => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, []);
 
     const hero = {
         bg: "contact",
