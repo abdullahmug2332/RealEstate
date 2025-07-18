@@ -120,8 +120,8 @@ export default function Property() {
             <Modal
                 isOpen={modalIsOpen}
                 onRequestClose={closeModal}
-                overlayClassName="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center"
-                className="outline-none w-full max-w-[100%] h-[90vh] relative mt-[100px] md:mt-[150px]"
+                overlayClassName="fixed inset-0 bg-black bg-opacity-90 z-[999] flex items-center justify-center"
+                className="outline-none w-full max-w-[100%]  relative "
             >
                 <button onClick={closeModal} className="absolute top-[40px] md:top-4 right-5 text-white bg-[black]  z-50 text-[30px] border-[2px] border-white p-[5px] rounded-full font-bold over"><RxCross1 className="text-white  z-50 text-[20px] font-bold  " /></button>
                 <Swiper
@@ -132,15 +132,15 @@ export default function Property() {
                     className="w-full h-full"
                 >
                     {property.media.map((item, index) => (
-                        <SwiperSlide key={index} className="!flex items-center justify-center bg-black">
+                        <SwiperSlide key={index} className="!flex !items-center !justify-center bg-black relative ">
                             {item.type === "image" ? (
                                 <img
                                     src={`${baseURL}/images/${item.src}`}
                                     alt={`modal-media-${index}`}
-                                    className="max-h-[80vh] md:max-h-[78vh] max-w-full mx-auto object-contain"
+                                    className=" max-w-full !h-[90vh] mx-auto object-contain"
                                 />
                             ) : (
-                                <video controls autoPlay className="max-h-[80vh] md:max-h-[78vh]  mx-auto max-w-full object-contain">
+                                <video controls autoPlay className=" mx-auto !h-[90vh] max-w-full object-contain">
                                     <source src={`${baseURL}/images/${item.src}`} type="video/mp4" />
                                 </video>
                             )}
