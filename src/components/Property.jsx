@@ -248,7 +248,7 @@ export default function Property() {
                     <li><span className="font-semibold">Back:</span> {property.back} ft</li>
                     <li><span className="font-semibold">Location:</span> {property.location}</li>
                 </ul>
-                <h2 className="text-xl font-semibold mt-2">Description</h2>
+                <h2 className="text-xl font-semibold mt-2">Description:</h2>
                 <p >{property.description}</p>
 
                 <div className="flex gap-[5px] my-[40px] flex-wrap">
