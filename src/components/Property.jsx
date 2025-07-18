@@ -121,7 +121,7 @@ export default function Property() {
                 overlayClassName="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center"
                 className="outline-none w-full max-w-[100%] h-[90vh] relative mt-[100px] md:mt-[150px]"
             >
-                <button onClick={closeModal} className="absolute top-[40px] md:top-4 right-5 text-white text-3xl z-50 text-[30px] border border-white p-[10px] rounded-full font-semibold over"><RxCross1 className="text-white text-3xl z-50 text-[30px] font-semibold  " /></button>
+                <button onClick={closeModal} className="absolute top-[40px] md:top-4 right-5 text-white bg-[black]  z-50 text-[30px] border-[2px] border-white p-[5px] rounded-full font-bold over"><RxCross1 className="text-white  z-50 text-[20px] font-bold  " /></button>
                 <Swiper
                     modules={[Navigation, Pagination]}
                     navigation
