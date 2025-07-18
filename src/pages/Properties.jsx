@@ -107,9 +107,9 @@ export default function Properties() {
                         transition={{ duration: 1 }}
                         className={`sticky top-0 left-0 w-full md:w-[30%] xl:w-[25%] ${toggle ? "h-[470px]" : "h-[47px] md:h-[470px]"} duration-500  bg-[#2c2c2c]  py-2 px-5 rounded-[10px] overflow-hidden`}
                     >
-                        <div className='flex justify-between'>
+                        <div onClick={() => setToggle(!toggle)} className='flex justify-between'>
                             <p className='font-semibold text-[25px]'>Filter</p>
-                            <BiAbacus className='text-[35px] ' onClick={() => setToggle(!toggle)} />
+                            <BiAbacus className='text-[35px] '  />
                         </div>
                         <hr className='mt-[5px]' />
                         <p className='mt-[10px] text-[17px] font-medium'>Purpose:</p>
