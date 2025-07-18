@@ -36,6 +36,8 @@ export default function Property() {
             try {
                 const res = await axios.get(`${baseURL}/properties/${id}`);
                 setProperty(res.data);
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+
             } catch (error) {
                 console.error("Error fetching property:", error);
             } finally {
