@@ -99,7 +99,7 @@ export default function Property() {
                         <SwiperSlide key={index}>
                             <div
                                 onClick={() => openModal(index)}
-                                className="flex justify-center items-center h-[85%]  rounded-lg overflow-hidden shadow cursor-pointer"
+                                className="flex justify-center items-center h-[100%]  rounded-lg overflow-hidden shadow cursor-pointer"
                             >
                                 {item.type === "image" ? (
                                     <img src={`${baseURL}/images/${item.src}`} alt={`media-${index}`} className="h-full w-full object-contain" />
@@ -119,9 +119,9 @@ export default function Property() {
                 isOpen={modalIsOpen}
                 onRequestClose={closeModal}
                 overlayClassName="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center"
-                className="outline-none w-full max-w-[90%] h-[90vh] relative mt-[100px]"
+                className="outline-none w-full max-w-[100%] h-[90vh] relative mt-[100px] md:mt-[150px]"
             >
-                <button onClick={closeModal} className="absolute top-2 right-4 text-white text-3xl z-50 text-[30px]"><RxCross1 className="text-white text-3xl z-50 text-[30px]" /></button>
+                <button onClick={closeModal} className="absolute top-4 right-5 text-white text-3xl z-50 text-[30px] border border-white p-[10px] rounded-full font-semibold over"><RxCross1 className="text-white text-3xl z-50 text-[30px] font-semibold  " /></button>
                 <Swiper
                     modules={[Navigation, Pagination]}
                     navigation
@@ -130,15 +130,15 @@ export default function Property() {
                     className="w-full h-full"
                 >
                     {property.media.map((item, index) => (
-                        <SwiperSlide key={index} className="flex items-center justify-center bg-black">
+                        <SwiperSlide key={index} className="!flex items-center justify-center bg-black">
                             {item.type === "image" ? (
                                 <img
                                     src={`${baseURL}/images/${item.src}`}
                                     alt={`modal-media-${index}`}
-                                    className="max-h-[80vh] max-w-full mx-auto object-contain"
+                                    className="max-h-[80vh] md:max-h-[78vh] max-w-full mx-auto object-contain"
                                 />
                             ) : (
-                                <video controls autoPlay className="max-h-full  mx-auto max-w-full object-contain">
+                                <video controls autoPlay className="max-h-[80vh] md:max-h-[78vh]  mx-auto max-w-full object-contain">
                                     <source src={`${baseURL}/images/${item.src}`} type="video/mp4" />
                                 </video>
                             )}
