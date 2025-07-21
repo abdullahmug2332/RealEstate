@@ -10,28 +10,29 @@ import 'swiper/css/pagination';
 import axios from 'axios';
 import { baseURL } from '../../API/baseURL';
 
-export default function HomeCards() {
+export default function PropertyCards(props) {
 
-     const [properties, setProperties] = useState([]);
-
+    const [properties, setProperties] = useState([]);
     useEffect(() => {
-    const fetchProperties = async () => {
-        try {
-            const res = await axios.get(`${baseURL}/properties`);
-            const available = res.data.filter(
-                (property) => property.soldout == false && property.rentedOut == false
-            );
-            const sorted = available
-                .sort((a, b) => new Date(b.created_at) - new Date(a.created_at))
-                .slice(0, 5); // latest 5 available properties
-            setProperties(sorted);
-        } catch (error) {
-            console.error("Error fetching properties:", error);
-        }
-    };
+        const id = props.id;
+        const fetchProperties = async () => {
+            console.log(id)
+            try {
+                const res = await axios.get(`${baseURL}/properties`);
+                const available = res.data.filter(
+                    (property) => property.soldout == false && property.rentedOut == false && property.id !== Number(props.id)
+                );
+                const sorted = available
+                    .sort((a, b) => new Date(b.created_at) - new Date(a.created_at))
+                    .slice(0, 5); // latest 5 available properties
+                setProperties(sorted);
+            } catch (error) {
+                console.error("Error fetching properties:", error);
+            }
+        };
 
-    fetchProperties();
-}, []);
+        fetchProperties();
+    }, [props.id]);
 
     return (
         <>

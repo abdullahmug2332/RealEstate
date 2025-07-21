@@ -8,7 +8,7 @@ import { TbRulerMeasure2, TbRulerMeasure } from "react-icons/tb";
 import { MdHome, MdOutlineBedroomParent } from "react-icons/md";
 import { FaBath, FaWhatsapp } from "react-icons/fa";
 import { Link, useParams } from "react-router-dom";
-import HomeCards from "./HomeCards";
+import PropertyCards from "./PropertyCards";
 import axios from "axios";
 import { baseURL } from "../../API/baseURL";
 import Modal from "react-modal";
@@ -261,7 +261,7 @@ export default function Property() {
                     </a>
                 </div>
             </div>
-            <HomeCards />
+            <PropertyCards id={id}/>
         </section>
     );
 }
