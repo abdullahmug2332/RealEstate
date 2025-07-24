@@ -105,7 +105,7 @@ export default function Properties() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 1 }}
-                        className={`sticky top-[99px] md:top-[112px] left-0 w-full md:w-[30%] xl:w-[25%] ${toggle ? "h-[470px]" : "h-[51px] md:h-[470px]"} duration-500  bg-[#2c2c2c]  py-2 px-5 rounded md:rounded-[10px] overflow-hidden z-[99] border`}
+                        className={`sticky top-[99px] md:top-[112px] left-0 w-full md:w-[30%] xl:w-[25%] ${toggle ? "h-[470px]" : "h-[51px] md:h-[470px]"} duration-500  bg-[#2c2c2c]  py-2 px-5 rounded md:rounded-[10px] overflow-hidden z-[99] border md:border-0 filter`}
                     >
                         <div onClick={() => setToggle(!toggle)} className='flex justify-between'>
                             <p className='font-semibold text-[25px]'>Filter</p>
