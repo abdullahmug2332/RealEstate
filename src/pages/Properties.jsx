@@ -52,30 +52,30 @@ export default function Properties() {
     };
 
     const applyFilters = () => {
-    const filtered = data.filter((item) => {
-        const price = Number(item.price) || 0;
-        const measurement = Number(item.measurement) || 0;
-        const rooms = Number(item.rooms) || 0;
-        const bath = Number(item.bath) || 0;
-        const front = Number(item.front) || 0;
-        const back = Number(item.back) || 0;
+        const filtered = data.filter((item) => {
+            const price = Number(item.price) || 0;
+            const measurement = Number(item.measurement) || 0;
+            const rooms = Number(item.rooms) || 0;
+            const bath = Number(item.bath) || 0;
+            const front = Number(item.front) || 0;
+            const back = Number(item.back) || 0;
 
-        return (
-            (filters.minPrice === '' || price >= Number(filters.minPrice)) &&
-            (filters.maxPrice === '' || price <= Number(filters.maxPrice)) &&
-            (filters.from === '' || measurement >= Number(filters.from)) &&
-            (filters.to === '' || measurement <= Number(filters.to)) &&
-            (filters.unit === '' || item.unit === filters.unit) &&
-            (filters.type === '' || item.type === filters.type) &&
-            (filters.rooms === '' || rooms === Number(filters.rooms)) &&
-            (filters.bath === '' || bath === Number(filters.bath)) &&
-            (filters.front === '' || front == Number(filters.front)) &&
-            (filters.back === '' || back == Number(filters.back))
-        );
-    });
+            return (
+                (filters.minPrice === '' || price >= Number(filters.minPrice)) &&
+                (filters.maxPrice === '' || price <= Number(filters.maxPrice)) &&
+                (filters.from === '' || measurement >= Number(filters.from)) &&
+                (filters.to === '' || measurement <= Number(filters.to)) &&
+                (filters.unit === '' || item.unit === filters.unit) &&
+                (filters.type === '' || item.type === filters.type) &&
+                (filters.rooms === '' || rooms === Number(filters.rooms)) &&
+                (filters.bath === '' || bath === Number(filters.bath)) &&
+                (filters.front === '' || front == Number(filters.front)) &&
+                (filters.back === '' || back == Number(filters.back))
+            );
+        });
 
-    setFilteredData(filtered);
-};
+        setFilteredData(filtered);
+    };
 
     const clearFilters = () => {
         setFilters({
@@ -105,11 +105,11 @@ export default function Properties() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 1 }}
-                        className={`sticky top-0 left-0 w-full md:w-[30%] xl:w-[25%] ${toggle ? "h-[470px]" : "h-[47px] md:h-[470px]"} duration-500  bg-[#2c2c2c]  py-2 px-5 rounded-[10px] overflow-hidden`}
+                        className={`sticky top-[99px] md:top-[112px] left-0 w-full md:w-[30%] xl:w-[25%] ${toggle ? "h-[470px]" : "h-[51px] md:h-[470px]"} duration-500  bg-[#2c2c2c]  py-2 px-5 rounded md:rounded-[10px] overflow-hidden z-[99] border`}
                     >
                         <div onClick={() => setToggle(!toggle)} className='flex justify-between'>
                             <p className='font-semibold text-[25px]'>Filter</p>
-                            <BiAbacus className='text-[35px] '  />
+                            <BiAbacus className='text-[35px] ' />
                         </div>
                         <hr className='mt-[5px]' />
                         <p className='mt-[10px] text-[17px] font-medium'>Purpose:</p>
@@ -195,7 +195,9 @@ export default function Properties() {
                             )}
                         </div>
                     </div>
+
                 </div>
+
             </div>
         </section>
     );
