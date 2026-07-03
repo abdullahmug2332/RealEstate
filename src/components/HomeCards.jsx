@@ -17,12 +17,14 @@ export default function HomeCards() {
     const fetchProperties = async () => {
         try {
             const res = await axios.get(`${baseURL}/properties`);
+            console.log(res.data);
             const available = res.data.filter(
                 (property) => property.soldout == false && property.rentedOut == false
             );
             const sorted = available
                 .sort((a, b) => new Date(b.created_at) - new Date(a.created_at))
-                .slice(0, 5); // latest 5 available properties
+                .slice(0, 10)
+                .reverse();  // latest 5 available properties
             setProperties(sorted);
         } catch (error) {
             console.error("Error fetching properties:", error);
