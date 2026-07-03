@@ -11,33 +11,26 @@ import axios from "axios";
 import { baseURL } from "../../API/baseURL";
 
 export default function HomeCards() {
-  const [properties, setProperties] = useState([]);
+   const [properties, setProperties] = useState([]);
 
-  useEffect(() => {
+    useEffect(() => {
     const fetchProperties = async () => {
-      try {
-        const res = await axios.get(`${baseURL}/properties`);
-
-        const latestProperties = res.data
-          .filter(
-            (property) =>
-              property.soldout === false && property.rentedOut === false,
-          )
-          .sort(
-            (a, b) =>
-              new Date(b.created_at).getTime() -
-              new Date(a.created_at).getTime(),
-          )
-          .slice(0, 5);
-
-        setProperties(latestProperties);
-      } catch (error) {
-        console.error("Error fetching properties:", error);
-      }
+        try {
+            const res = await axios.get(`${baseURL}/properties`);
+            const available = res.data.filter(
+                (property) => property.soldout == false && property.rentedOut == false
+            );
+            const sorted = available
+                .sort((a, b) => new Date(b.created_at) - new Date(a.created_at))
+                .slice(0, 5); // latest 5 available properties
+            setProperties(sorted);
+        } catch (error) {
+            console.error("Error fetching properties:", error);
+        }
     };
 
     fetchProperties();
-  }, []);
+    }, []);
 
   return (
     <>
